@@ -13,18 +13,25 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
+        <!-- List of Items -->
         <StackPanel Grid.Row="0">
-            <ListBox x:Name="ListItems" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" />
+            <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                <ListBox x:Name="ListItems" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
+                 SelectionChanged="ListItems_SelectionChanged" DisplayMemberPath="Name" />
+            </Grid>
         </StackPanel>
-        
+
+
+        <!-- Buttons -->
         <StackPanel Grid.Row="1" Orientation="Horizontal" FlowDirection="RightToLeft">
             <Button Content="Add" Click="ButtonAdd_Click" Width="50" Margin="3" />
             <Button Content="Delete" Click="ButtonDelete_Click" Width="50" Margin="3" />
-            <Button Content="List" Click="ButtonList_Click" Width="50" Margin="3" />
+            <Button Content="List" Width="50" Margin="3" />
         </StackPanel>
 
+        <!-- Details Section -->
         <Border Grid.Row="2" Background="#FFA8A8DC" CornerRadius="10" Padding="5">
-            <Grid Grid.Row="2" Margin="5">
+            <Grid Margin="5">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
@@ -34,19 +41,19 @@
 
                 <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="5">
                     <TextBlock Text="Name:" Width="80" VerticalAlignment="Center"/>
-                    <TextBox Width="300"/>
+                    <TextBox x:Name="NameTextBox" Width="300"/>
                 </StackPanel>
                 <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="5">
                     <TextBlock Text="Model:" Width="80" VerticalAlignment="Center"/>
-                    <TextBox Width="300"/>
+                    <TextBox x:Name="ModelTextBox" Width="300"/>
                 </StackPanel>
                 <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="5">
                     <TextBlock Text="Price:" Width="80" VerticalAlignment="Center"/>
-                    <TextBox Width="300"/>
+                    <TextBox x:Name="PriceTextBox" Width="300"/>
                 </StackPanel>
                 <StackPanel Grid.Row="3" Orientation="Horizontal" Margin="5">
                     <TextBlock Text="Description:" Width="80"/>
-                    <TextBox Width="300"/>
+                    <TextBox x:Name="DescriptionTextBox" Width="300"/>
                 </StackPanel>
             </Grid>
         </Border>
