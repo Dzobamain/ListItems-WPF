@@ -16,5 +16,11 @@
         <StackPanel Grid.Row="0">
             <ListBox x:Name="ListItems" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" />
         </StackPanel>
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal" FlowDirection="RightToLeft">
+            <Button Content="Add" Click="ButtonAdd_Click" Width="50" Margin="3" />
+            <Button Content="Delete" Click="ButtonDelete_Click" Width="50" Margin="3" />
+            <Button Content="List" Click="ButtonList_Click" Width="50" Margin="3" />
+        </StackPanel>
     </Grid>
 </Window>
