@@ -7,6 +7,14 @@
         mc:Ignorable="d"
         Title="ListItems" Height="800" Width="450">
     <Grid Margin="5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
 
+        <StackPanel Grid.Row="0">
+            <ListBox x:Name="ListItems" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" />
+        </StackPanel>
     </Grid>
 </Window>

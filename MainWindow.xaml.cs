@@ -17,6 +17,24 @@ namespace ListItems_WPF
 {
     public partial class MainWindow : Window
     {
+        public MainWindow()
+        {
+            InitializeComponent();
+        }
 
+        private void ButtonAdd_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ButtonDelete_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ButtonList_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
